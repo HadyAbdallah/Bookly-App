@@ -1,4 +1,5 @@
 import 'package:bookly/Fetures/Home/presentation/views/Widgets/CustomAppBar.dart';
+import 'package:bookly/Fetures/Home/presentation/views/Widgets/ListViewItem.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -9,7 +10,10 @@ class HomeViewBody extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 24),
       child: Column(
-        children: [CustomAppBar()],
+        children: [
+          CustomAppBar(),
+          ListViewItem(),
+        ],
       ),
     );
   }
