@@ -1,5 +1,6 @@
 import 'package:bookly/Fetures/Home/presentation/views/HomeView.dart';
 import 'package:bookly/Fetures/Splash/presentation/views/Widget/SlidingText.dart';
+
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/assets.dart';
 import 'package:flutter/material.dart';
@@ -37,9 +38,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset(
-          AssetsData.logo,
-        ),
+        Image.asset(AssetsData.logo),
         SidingText(slidingAnimation: slidingAnimation)
       ],
     );
