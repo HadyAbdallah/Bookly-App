@@ -1,12 +1,14 @@
-import 'package:bookly/Fetures/Home/presentation/views/Widgets/BestSellerListViewItem.dart';
 import 'package:flutter/material.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({super.key});
+import '../../../../Home/presentation/views/Widgets/BestSellerListViewItem.dart';
+
+class SearchResultListView extends StatelessWidget {
+  const SearchResultListView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SliverList.builder(
+    return ListView.builder(
+        padding: EdgeInsets.zero,
         itemCount: 10,
         itemBuilder: (context, index) {
           return const Padding(
@@ -14,5 +16,6 @@ class BestSellerListView extends StatelessWidget {
             child: BookListViewItem(),
           );
         });
+    ;
   }
 }
