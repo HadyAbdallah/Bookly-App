@@ -14,7 +14,10 @@ class BookDetailsSection extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width * 0.2),
-          child: const CustomBookImage(),
+          child: const CustomBookImage(
+            imageURL:
+                'https://cdn.shopify.com/s/files/1/0310/7487/7577/files/Y3597HarryPotterandthePrisonerofAzkaban_USROUNDED_5a1e1fb8-1ad5-47f1-b03e-448d5e5bf0ba_1280x.png?v=1724246496',
+          ),
         ),
         const SizedBox(
           height: 42,
