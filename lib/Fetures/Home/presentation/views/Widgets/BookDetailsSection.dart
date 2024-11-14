@@ -1,4 +1,3 @@
-import 'package:bookly/Fetures/Home/presentation/views/Widgets/BookRating.dart';
 import 'package:bookly/Fetures/Home/presentation/views/Widgets/BooksAction.dart';
 import 'package:bookly/Fetures/Home/presentation/views/Widgets/CustomBookItem.dart';
 import 'package:bookly/core/utils/styles.dart';
@@ -36,12 +35,12 @@ class BookDetailsSection extends StatelessWidget {
             style: Styles.textStyle16.copyWith(fontStyle: FontStyle.italic),
           ),
         ),
-        const SizedBox(
+        /*const SizedBox(
           height: 14,
         ),
         const BookRating(
-          mainAxisAlignment: MainAxisAlignment.center,
-        ),
+          mainAxisAlignment: MainAxisAlignment.center,rating: 2,count: 2,
+        ),*/
         const SizedBox(
           height: 37,
         ),
