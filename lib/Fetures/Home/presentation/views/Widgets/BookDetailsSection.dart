@@ -3,8 +3,11 @@ import 'package:bookly/Fetures/Home/presentation/views/Widgets/CustomBookItem.da
 import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
+import '../../../data/models/book_model/book_model.dart';
+
 class BookDetailsSection extends StatelessWidget {
-  const BookDetailsSection({super.key});
+  const BookDetailsSection({super.key, required this.bookModel});
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -13,17 +16,17 @@ class BookDetailsSection extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width * 0.2),
-          child: const CustomBookImage(
-            imageURL:
-                'https://cdn.shopify.com/s/files/1/0310/7487/7577/files/Y3597HarryPotterandthePrisonerofAzkaban_USROUNDED_5a1e1fb8-1ad5-47f1-b03e-448d5e5bf0ba_1280x.png?v=1724246496',
+          child: CustomBookImage(
+            imageURL: bookModel.volumeInfo.imageLinks?.thumbnail ?? '',
           ),
         ),
         const SizedBox(
           height: 42,
         ),
-        const Text(
-          "The Jungle Book",
+        Text(
+          bookModel.volumeInfo.title!,
           style: Styles.textStyle30,
+          textAlign: TextAlign.center,
         ),
         const SizedBox(
           height: 6,
@@ -31,7 +34,7 @@ class BookDetailsSection extends StatelessWidget {
         Opacity(
           opacity: 0.7,
           child: Text(
-            "Rudyard Kipling",
+            bookModel.volumeInfo.authors?[0] ?? '',
             style: Styles.textStyle16.copyWith(fontStyle: FontStyle.italic),
           ),
         ),
