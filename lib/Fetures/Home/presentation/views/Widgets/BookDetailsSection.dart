@@ -34,6 +34,7 @@ class BookDetailsSection extends StatelessWidget {
         Opacity(
           opacity: 0.7,
           child: Text(
+            textAlign: TextAlign.center,
             bookModel.volumeInfo.authors?[0] ?? '',
             style: Styles.textStyle16.copyWith(fontStyle: FontStyle.italic),
           ),

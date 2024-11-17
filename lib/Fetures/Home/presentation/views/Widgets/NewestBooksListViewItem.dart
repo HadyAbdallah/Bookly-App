@@ -29,41 +29,46 @@ class BookListViewItem extends StatelessWidget {
               width: 30,
             ),
             Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.5,
-                    child: Text(
-                      bookModel.volumeInfo.title!,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: Styles.textStyle20
-                          .copyWith(fontFamily: kGTSectraFine),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 3,
-                  ),
-                  Text(
-                    bookModel.volumeInfo.authors?[0] ?? '',
-                    style: Styles.textStyle14,
-                  ),
-                  const SizedBox(
-                    height: 3,
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        "Free",
+              child: SingleChildScrollView(
+                physics: const NeverScrollableScrollPhysics(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.5,
+                      child: Text(
+                        bookModel.volumeInfo.title!,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                         style: Styles.textStyle20
-                            .copyWith(fontWeight: FontWeight.bold),
+                            .copyWith(fontFamily: kGTSectraFine),
                       ),
-                      const Spacer(),
-                      //BookRating(rating: bookModel.volumeInfo.a,)
-                    ],
-                  )
-                ],
+                    ),
+                    const SizedBox(
+                      height: 3,
+                    ),
+                    Text(
+                      bookModel.volumeInfo.authors?[0] ?? '',
+                      style: Styles.textStyle14,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    const SizedBox(
+                      height: 3,
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "Free",
+                          style: Styles.textStyle20
+                              .copyWith(fontWeight: FontWeight.bold),
+                        ),
+                        const Spacer(),
+                        //BookRating(rating: bookModel.volumeInfo.a,)
+                      ],
+                    ),
+                  ],
+                ),
               ),
             )
           ],
