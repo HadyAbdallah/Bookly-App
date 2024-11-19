@@ -40,11 +40,28 @@ dependencies:
   go_router: ^14.4.1
   google_fonts: ^6.2.1
   url_launcher: ^6.3.1
+  
 
 dev_dependencies:
   flutter_lints: ^4.0.0
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/logo.png"  # Logo image path 
+  min_sdk_android: 21
+
+
+
+flutter_native_splash:
+  color: "#000000"   # Color of the background of the splash screen 
+  # image: assets/images/logo(1).png  # image path
+  android_12:
+    color: "#000000"   # Color of the background of the splash screen 
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

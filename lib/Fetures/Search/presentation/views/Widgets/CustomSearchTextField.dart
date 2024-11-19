@@ -10,6 +10,7 @@ class CustomSearchTextField extends StatelessWidget {
     return TextField(
       onChanged: (value) {
         search = value;
+        BlocProvider.of<SearchForBookCubit>(context).searchForBooks(q: search!);
       },
       onSubmitted: (value) {
         search = value;
