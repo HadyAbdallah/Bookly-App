@@ -29,4 +29,4 @@ Bookly is a sophisticated reading application developed using Flutter, designed 
 
 Bookly is designed with a focus on efficiency and user satisfaction. By leveraging the MVVM architecture alongside the BLoC pattern for state management, the application ensures that users can effortlessly browse and enjoy a vast library of books tailored to their interests.
 
-#### Explore the application post on LinkedIn: <a target="_blank" href="[https://www.linkedin.com/posts/theahmedhany_dart-flutter-mobileappdevelopment-activity-7235950761929568257-jEod?utm_source=share&utm_medium=member_desktop](https://www.linkedin.com/feed/update/urn:li:activity:7265007116963246081/)"> Click Here. </a>
+#### Explore the application post on LinkedIn: <a target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7265007116963246081/"> Click Here. </a>
